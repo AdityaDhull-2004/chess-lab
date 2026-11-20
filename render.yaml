@@ -1,0 +1,14 @@
+# One-click deploy on Render: https://render.com/deploy?repo=<your repo url>
+# Free instances sleep and have no persistent disk, so set DATABASE_URL to a free Postgres
+# (Neon / Supabase / Render Postgres) to keep accounts, friends and game history.
+services:
+  - type: web
+    name: chess-lab
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/info
+    envVars:
+      - key: DATABASE_URL
+        sync: false

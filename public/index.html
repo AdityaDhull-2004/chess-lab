@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Chess Lab — play bots, analyse, play friends</title>
+  <meta name="description" content="Play human-like Stockfish bots, analyse any position, review your games, and play friends with a shareable link.">
+  <link rel="icon" href="pieces/cburnett/wN.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/chessground-assets/chessground.base.css">
+  <link rel="stylesheet" href="vendor/chessground-assets/chessground.brown.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": { "chess.js": "./vendor/chess.js/chess.js", "chessground": "./vendor/chessground/chessground.js" } }
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="." aria-label="Chess Lab home"><img src="pieces/cburnett/wN.svg" alt="" width="28" height="28"><span>Chess Lab</span></a>
+    <nav id="nav">
+      <button data-view="bots" class="on">Play a bot</button>
+      <button data-view="friend">Play a friend</button>
+      <button data-view="analysis">Analysis &amp; Review</button>
+      <button data-view="social" class="needs-server">Friends</button>
+    </nav>
+    <div class="tools">
+      <span id="engStatus" class="engstatus" title="Engine status"></span>
+      <span id="acct"></span>
+      <button id="fsBtn" class="icon" title="Full screen / focus mode (Z)">⛶</button>
+      <button id="setBtn" class="icon" title="Settings: board colours, sounds">⚙</button>
+      <button id="soundBtn" class="icon" title="Toggle sound">🔊</button>
+      <button id="themeBtn" class="icon" title="Toggle light / dark">🌓</button>
+    </div>
+  </header>
+  <button id="fsExit" class="icon fsfloat" title="Exit full screen (Z / Esc)">✕</button>
+  <main>
+    <section id="view-bots" class="view active"></section>
+    <section id="view-friend" class="view"></section>
+    <section id="view-analysis" class="view"></section>
+    <section id="view-social" class="view"></section>
+  </main>
+  <noscript>Chess Lab needs JavaScript.</noscript>
+  <script type="module" src="js/ui/main.js"></script>
+</body>
+</html>
