@@ -2,6 +2,8 @@
 
 A free chess site for you and your friends: **play human-like Stockfish bots**, **analyse any position at any depth**, **review your games** (chess.com-style move grades and accuracy), **play friends through a shareable link**, and — on the server version — **accounts, friends, challenges, ratings and saved game history**.
 
+**Live demo (bots, analysis, review): https://adityadhull-2004.github.io/chess-lab/**
+
 Stockfish runs **inside the browser (WebAssembly, on the CPU)** – no GPU, no API keys, no subscription.
 
 | Where it runs | What works |
